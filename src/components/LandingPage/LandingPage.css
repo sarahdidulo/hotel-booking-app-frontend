@@ -1,0 +1,45 @@
+.landing-page-wrapper {
+    height: 100vh;
+    padding: 50px;
+    background-image: url("./../../assets/images/hotel-image.jpg");
+    background-size: cover;
+}
+.landing-page {
+    display: flex;
+    justify-content: flex-end;
+}
+.landing-page-logo-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 5px black;
+}
+.landing-page-logo {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+.landing-page-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    padding-right: 5vw;
+}
+.landing-page-login {
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    width: 25vw;
+    min-width: 290px;
+}
+
+@media screen and (max-width: 768px) {
+    .landing-page{
+        justify-content: center;
+    }
+}

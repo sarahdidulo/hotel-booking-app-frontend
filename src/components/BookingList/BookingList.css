@@ -1,0 +1,83 @@
+.booking-list {
+    padding: 150px 50px;
+    position: relative;
+}
+.booking-check {
+    margin-top: 30px;
+}
+
+.booking-check a {
+    color: #00C6DC;
+}
+.booking-list-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.booking-item {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.booking-item-image {
+    width: 50%;
+}
+
+.booking-item-image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.booking-item-text {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.booking-item-room-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0 !important;
+    width: 100%;
+}
+.booking-item p {
+    margin-top: 22px;
+}
+
+@media screen and (max-width: 768px){
+    
+    .booking-list {
+        padding: 130px 20px;
+        position: relative;
+    }
+
+    .booking-list-group {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .booking-item {
+        padding: 20px;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+        max-width: 400px;
+    }
+    .booking-item-image {
+        width: 100%;
+    }
+    .booking-item-text {
+        width: 100%;
+        padding-left: 0px;
+        margin-top: 20px;
+    }
+}

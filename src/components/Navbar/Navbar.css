@@ -1,0 +1,124 @@
+
+.nav-wrapper{
+    width: 100%;
+    /* background-color: blue; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* height: 50px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    background-image: url("./../../assets/images/hotel-image.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-logo {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 5px black;
+    /* margin-left: 100px; */
+}
+.nav-logo img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #00C6DC;
+    padding: 30px 20px;
+    display: block;
+    text-shadow: 1px 1px 5px rgb(90, 90, 90);
+    font-size: 18px;
+}
+
+.nav-list a:hover{
+    color: rgb(38, 104, 185);
+}
+
+.nav-list-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.nav-list a:has(.nav-list-avatar) {
+    padding: 0 0 0 20px;
+}
+.nav-list-mobile {
+    display: none;
+}
+.nav-menu-button{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .nav {
+        padding: 20px 20px;
+    }
+    .nav-list {
+        display: none;
+    }
+    .nav-list-mobile {
+        display: flex;
+        width: 100%;
+        background-color: #FFFFFF;
+        color: black;
+        flex-direction: column;
+        /* border-bottom: 1px solid rgb(196, 194, 194);  */
+        height: 0px;
+        /* max-height: 0px; */
+        transition: all 0.5s;
+        z-index: 13;
+    }
+    .nav-menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-menu-button-img {
+        width: 40px;
+        height: 40px;
+    }
+    .nav-list-item {
+        list-style: none;
+        border-bottom: 1px solid rgb(196, 194, 194);
+        display: none;
+        z-index: 0;
+    }
+
+    .nav-list-mobile a {
+        text-decoration: none;
+        color: black;
+        padding: 20px;
+        display: block;
+        font-weight: 600;
+        font-size: 16.5px;
+    }
+
+    .open-menu {
+        height: 180px !important;
+    }
+
+    .show {
+        display: block !important;
+        z-index: 10;
+    }
+}
