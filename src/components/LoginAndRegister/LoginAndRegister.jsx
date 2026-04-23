@@ -17,6 +17,7 @@ export default function LoginAndRegister() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [validatePassword, setValidatePassword] = useState(null);
+    const [isAdmin, setIsAdmin] = useState(false);
     const { currentUser, logUserDetails } = useContext(CurrentUserContext);
     const { successMessage, showSuccessMessage, clearSuccessMessage} = useContext(BannerContext);
     
@@ -155,6 +156,13 @@ export default function LoginAndRegister() {
                         value={confirmPassword} 
                         onChange={(e)=>setConfirmPassword(e.target.value)} 
                         placeholder="Confirm your password" />
+                    </label> 
+                    <label>
+                        I am an Admin *for testing purposes
+                         <br />
+                        <input type="checkbox" 
+                        checked={isAdmin}
+                        onChange={(e)=>setIsAdmin(e.target.checked)} />
                     </label> 
                     { validatePassword === false && <p style="color: red;">Passwords do not match.</p> }
                     <div className="log-reg-link-group">
