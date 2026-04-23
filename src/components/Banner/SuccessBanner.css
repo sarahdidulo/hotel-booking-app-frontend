@@ -7,7 +7,7 @@
     height: 40px;
     max-width: 280px;
     width: 80vw;
-    z-index: 10;
+    /* z-index: 10; */
     transition: all 1s linear;
     opacity: 0;
 }

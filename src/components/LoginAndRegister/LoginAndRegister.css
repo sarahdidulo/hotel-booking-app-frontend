@@ -34,6 +34,7 @@
     color: rgb(0, 208, 255);
     margin-top: 5px;
     display: inline-block;
+    /* z-index: 15; */
 }
 
 input.sign-up-form-checkbox {
