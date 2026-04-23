@@ -89,11 +89,13 @@ export default function Navbar () {
                             Rooms
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink to="/bookings" id="bookings">
-                            Bookings
-                        </NavLink>
-                    </li>
+                    { currentUser.isAdmin === false && (
+                        <li>
+                            <NavLink to="/bookings" id="bookings">
+                                Bookings
+                            </NavLink>
+                        </li>
+                    )}
                     <li>
                         <NavLink to="/profile" id="profile" >
                             Profile

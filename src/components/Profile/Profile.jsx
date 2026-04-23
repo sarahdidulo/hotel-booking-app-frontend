@@ -6,6 +6,7 @@ import { CurrentUserContext } from "../CurrentUserContext";
 import { BannerContext } from "../Banner/BannerContext";
 import SuccessBanner from "../Banner/SuccessBanner";
 import InvalidBanner from "../Banner/InvalidBanner";
+import loading  from "./../../assets/images/rotate.gif";
 
 
 export default function Profile () {
@@ -91,58 +92,63 @@ export default function Profile () {
             <SuccessBanner />
             <InvalidBanner />
             <Navbar />
-            {console.log("current user profile", currentUser)}
-            {console.log("avatar", avatar)}
-            <div className="profile-group">
-                 <h2>Profile</h2>  
-                <button className="button-style profile-log-out-button" onClick={logout}>Log Out</button>
-            </div> 
-                <form className="profile-form" onSubmit={updateProfile}>
-                    <img className="profile-img" src={avatar ?? null} alt="profile"/>
-                    <label>
-                        Change your Avatar (add link):
-                        <br />
-                        <input type="text" 
-                        onChange={(e)=>setAvatar(e.target.value)}
-                        placeholder={avatar ?? ''} />
-                    </label>
-                    <label>
-                        First Name:
-                        <br />
-                        <input type="text" 
-                        onChange={(e)=>setFirstName(e.target.value)}
-                        placeholder={firstname ?? 'Enter your first name'} />
-                    </label>
-                    <label>
-                        Middle Name:
-                        <br />
-                        <input type="text" 
-                        onChange={(e)=>setMiddleName(e.target.value)}
-                        placeholder={middlename ?? 'Enter your middle name'} />
-                    </label>
-                    <label>
-                        Last Name:
-                        <br />
-                        <input type="text" 
-                        onChange={(e)=>setLastName(e.target.value)}
-                        placeholder={lastname ?? 'Enter your last name'} />
-                    </label>
-                    <label>
-                        Email:
-                        <br />
-                        <input type="text" 
-                        placeholder={email ?? ''}
-                        disabled />
-                    </label>
-                    <label>
-                        Username: 
-                        <br />
-                        <input type="text" 
-                        placeholder={username ?? ''}
-                        disabled />
-                    </label>
-                    <button className="button-style profile-form-button">Update Profile Details</button>
-                </form>
+           { (currentUser.id === undefined) ? (
+                <img src={loading} alt="loading"/>
+                ) : 
+                <>
+                <div className="profile-group">
+                    <h2>Profile</h2>  
+                    <button className="button-style profile-log-out-button" onClick={logout}>Log Out</button>
+                </div> 
+                    <form className="profile-form" onSubmit={updateProfile}>
+                        <img className="profile-img" src={avatar ?? null} alt="profile"/>
+                        <label>
+                            Change your Avatar (add link):
+                            <br />
+                            <input type="text" 
+                            onChange={(e)=>setAvatar(e.target.value)}
+                            placeholder={avatar ?? ''} />
+                        </label>
+                        <label>
+                            First Name:
+                            <br />
+                            <input type="text" 
+                            onChange={(e)=>setFirstName(e.target.value)}
+                            placeholder={firstname ?? 'Enter your first name'} />
+                        </label>
+                        <label>
+                            Middle Name:
+                            <br />
+                            <input type="text" 
+                            onChange={(e)=>setMiddleName(e.target.value)}
+                            placeholder={middlename ?? 'Enter your middle name'} />
+                        </label>
+                        <label>
+                            Last Name:
+                            <br />
+                            <input type="text" 
+                            onChange={(e)=>setLastName(e.target.value)}
+                            placeholder={lastname ?? 'Enter your last name'} />
+                        </label>
+                        <label>
+                            Email:
+                            <br />
+                            <input type="text" 
+                            placeholder={email ?? ''}
+                            disabled />
+                        </label>
+                        <label>
+                            Username: 
+                            <br />
+                            <input type="text" 
+                            placeholder={username ?? ''}
+                            disabled />
+                        </label>
+                        <button className="button-style profile-form-button">Update Profile Details</button>
+                    </form>
+                </>
+            } 
+            
                   
         </main>
     );
