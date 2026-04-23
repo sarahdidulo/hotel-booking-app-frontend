@@ -115,11 +115,14 @@ export default function Navbar () {
                         Rooms
                     </NavLink>
                 </li>
-                <li className="nav-list-item">
-                    <NavLink to="/bookings" id="bookings">
-                        Bookings
-                    </NavLink>
-                </li>
+                { currentUser.isAdmin === false && (
+                    <li className="nav-list-item">
+                        <NavLink to="/bookings" id="bookings">
+                            Bookings
+                        </NavLink>
+                    </li>
+                    )
+                }
                 <li className="nav-list-item">
                     <NavLink to="/profile" id="profile" >
                         Profile
