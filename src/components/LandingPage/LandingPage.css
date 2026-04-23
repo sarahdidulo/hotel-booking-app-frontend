@@ -1,12 +1,13 @@
 .landing-page-wrapper {
     height: 100vh;
-    padding: 50px;
-    background-image: url("./../../assets/images/hotel-image.jpg");
-    background-size: cover;
 }
 .landing-page {
+    background-image: url("./../../assets/images/hotel-image.jpg");
+    background-size: cover;
     display: flex;
     justify-content: flex-end;
+    padding: 50px;
+    height: 100%;
 }
 .landing-page-logo-group {
     display: flex;

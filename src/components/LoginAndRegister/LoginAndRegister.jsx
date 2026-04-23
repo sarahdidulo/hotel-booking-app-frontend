@@ -21,11 +21,10 @@ export default function LoginAndRegister() {
     const { currentUser, logUserDetails } = useContext(CurrentUserContext);
     const { successMessage, showSuccessMessage, clearSuccessMessage} = useContext(BannerContext);
     
-    
 
     const navigate = useNavigate();
 
-
+    
     async function login(e) {
         e.preventDefault();
         const requestOptions = {
@@ -102,7 +101,8 @@ export default function LoginAndRegister() {
                 body: JSON.stringify({
                     username: username,
                     email: email,
-                    password: password
+                    password: password,
+                    isAdmin: isAdmin
                 })
             } 
             try {
@@ -158,9 +158,11 @@ export default function LoginAndRegister() {
                         placeholder="Confirm your password" />
                     </label> 
                     <label>
-                        I am an Admin *for testing purposes
+                        I am an Admin <br />
+                        <span className="sign-up-form-test">(for testing purposes)</span>
                          <br />
                         <input type="checkbox" 
+                        className="sign-up-form-checkbox"
                         checked={isAdmin}
                         onChange={(e)=>setIsAdmin(e.target.checked)} />
                     </label> 

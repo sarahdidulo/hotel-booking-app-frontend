@@ -35,3 +35,12 @@
     margin-top: 5px;
     display: inline-block;
 }
+
+input.sign-up-form-checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.sign-up-form-test {
+    font-size: 13px !important;
+}
